@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import android.app.Activity;
+import android.content.Intent;
 
 
 public class CreateMessageActivity extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class CreateMessageActivity extends AppCompatActivity {
 
     //call onSendMessage() when the button is clicked
     public void onSendMessage(View view){
+        Intent intent = new Intent(this, ReceiveMessageActivity.class);
+        startActivity(intent);
 
     }
 

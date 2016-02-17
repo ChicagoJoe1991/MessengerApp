@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import android.app.Activity;
 import android.content.Intent;
+//we need to import android.widget libraries for the required view
 import android.widget.EditText;
 
 
@@ -30,8 +31,10 @@ public class CreateMessageActivity extends AppCompatActivity {
         String messageText = messageView.getText().toString();
         //Create a new Intent
         Intent intent = new Intent(this, ReceiveMessageActivity.class);
-        //add extra information to the intent, in this case the string from the EditText view
-        intent.putExtra("message",messageText);
+        /*add extra information to the intent, in this case the string from the EditText view,
+        Also, ReceiveMessageActivity.EXTRA_MESSAGE is a constant for the name of the exxtra
+        information. We will add it to ReceiveMessageActivity next.*/
+        intent.putExtra(ReceiveMessageActivity.EXTRA_MESSAGE,messageText);
         //send the activity to android for review
         startActivity(intent);
 

@@ -14,6 +14,9 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <!--the category android.intent.category.DEFAULT must be included in the
+                 intent filter or it won't be able to receive implicit intents-->
+                <category android:name="android.intent.category.DEFAULT" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
